@@ -7,7 +7,7 @@ nav {
     
 }
 ul {
-margin-left: 55%;}
+margin-left:  40%;}
 ul li {
 list-style-type:none;
 display:inline-table;
@@ -24,3 +24,16 @@ color: cornsilk;
 ul li a:hover { 
 color: red;
 }
+table, th, td {
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 5px;
+  }
+  table.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+ h1 {
+      margin-left: 35%;
+      margin-right: 25%;
+  }
