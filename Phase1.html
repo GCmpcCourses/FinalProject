@@ -1,13 +1,48 @@
-<html>
+<!DOCTYPE html>
     <head>
+        <meta charset="utf-8">
         <title> Marvel Phase 1 Movie List</title>
 <link rel="stylesheet" href="style.css" >
-<script> 
-
-
-
-</script>
     </head>
+    <script type= "text/javascript"> 
+
+        function sortTableByColumn(table, column, asc = true) {
+            const dirmodifier = asc ? 1: -1;
+            const tBody = table.tBodies[0];
+            const rows = Array.from(tBody.querySelectorAll("tr"));
+        
+            //sort each row
+            const sortedRows = rows.sort((a, b) => {
+               const aColText = a.querySelector('td:nth-child(${ column + 1})').textContent.trim(); 
+               const bColText = b.querySelector('td:nth-child(${ column + 1})').textContent.trim(); 
+        
+                return aColText > bColText ? (1 * dirmodifier) : (-1 * dirmodifier);
+            });
+          // removes all existing tr's from the table
+            while(tBody.firstChild) {
+                tBody.removeChild(tBody.firstChild);
+            }
+          // reinserts in the sorted fashion 
+            tBody.append(...sortedRows);
+        
+            //remember how the column is currently sorted
+            table.querySelectorAll("th").forEach(th =>th.classList.remove("th-sort-asc", "th-sort-desc"));
+            table.querySelector('th:nth-child(${ column + 1})').classList.toggle("th-sort-asc", asc);
+            table.querySelector('th:nth-child(${ column + 1})').classList.toggle("th-sort-desc", !asc);
+        
+        }
+        
+        document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+            headerCell.addEventListener("click", () =>{
+                const tableElement = headerCell.parentElement.parentElement.parentElement;
+                const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+                const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+        
+                sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+            });
+        });
+        
+        </script>
     <body>
         <nav>
             <ul>
@@ -20,17 +55,20 @@
             </ul>
 
         </nav>
-        <h1> Phase 1 Movies</h1>
-        <table class="center" >
+        <h1 id="topPhase1"> Phase 1 Movies</h1>
+        <table class="center" class="table-sortable" >
             <thead> 
-                <th>Movie</th>
-                <th>Title</th>
-                <th>Release Date</th>
-                <th>MCU Timeline</th>
-                <th>Box Office </th>
-                <th>Rotten Tomato Score</th>
-                <th>Auddience Score</th>  
+                <tr>
+                    <th>Movie</th>
+                    <th>Title</th>
+                    <th>Release Date</th>
+                    <th>MCU Timeline</th>
+                    <th>Box Office </th>
+                    <th>Rotten Tomato Score</th>
+                    <th>Auddience Score</th>  
+                </tr>    
             </thead>
+            <tbody>
             <tr> 
                 <td><a href="https://www.youtube.com/watch?v=KAE5ymVLmZg"><img src="IronMan.jpg" height="169.5" width="113"></a></td> 
                 <td><a href="#iron man">Iron Man</a></td>
@@ -43,7 +81,7 @@
             <tr> 
                 <td><a target="_blank" href="https://www.youtube.com/watch?v=xbqNb2PFKKA"><img src="TheIncredibleHulk.jpg" height="169.5" width="113"></a></td>
                 <td><a href="#the incredible hulk">The Incredible Hulk</a></td>
-                <td>Jun 13, 2008</td>
+                <td>June 13, 2008</td>
                 <td>2005</td>
                 <td>264800000</td>
                 <td>67</td>
@@ -70,7 +108,7 @@
             <tr> 
                 <td><a target="_blank" href="https://www.youtube.com/watch?v=W4DlMggBPvc"><img src="captainAmerica_TheFirstAvenger.jpg" height="169.5" width="113"></a></td>
                 <td><a href="#Captain America: The First Avenger">Captain America: The First Avenger</a></td>
-                <td>Jul 22, 2011</td>
+                <td>July 22, 2011</td>
                 <td>1940</td>
                 <td>370600000</td>
                 <td>80</td>
@@ -85,7 +123,9 @@
                 <td>91</td>
                 <td>91</td>  
             </tr>
+            </tbody>
         </table>
+        
 <br>
 
 <p id="iron man">  stuff about the iron man movie </p>
@@ -96,7 +136,7 @@
 <p id="the avengers">stuff about the avengers </p>
 
 
-
+<a href="#topPhase1">back to top</a>
 
 
 
