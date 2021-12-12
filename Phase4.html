@@ -2,11 +2,7 @@
     <head>
         <title> Marvel Phase 4 Movie List</title>
 <link rel="stylesheet" href="style.css" >
-<script> 
-
-
-
-</script>
+<script src="myscripts.js"> </script>
     </head>
     <body>
         <nav>
@@ -20,15 +16,15 @@
             </ul>
         </nav>
         <h1 id="topPhase4"> Phase 4 Movies</h1>
-        <table class="center">
+        <table id = myTable class="center">
             <thead> 
                 <th>Movie</th>  
-                <th>Title</th>  
-                <th>Release Date</th>  
-                <th>MCU Timeline</th> 
-                <th>Box Office </th>  
-                <th>Rotten Tomato Score</th>  
-                <th>Auddience Score</th>  
+                <th onclick=" sortTable(1)" >Title</th>  
+                <th onclick="">Release Date</th>  
+                <th onclick=" mcuTime()">MCU Timeline</th> 
+                <th onclick=" boxOff()">Box Office </th>  
+                <th onclick=" rottenTom()">Rotten Tomato Score %</th>  
+                <th onclick=" audScore()">Auddience Score %</th> 
             </thead>
             <tr> 
                 <td><a target="_blank" href="https://www.youtube.com/watch?v=Fp9pNPdNwjI">
@@ -38,8 +34,8 @@
                 <td>July 9, 2021</td>  
                 <td>2016</td>  
                 <td>379800000</td>  
-                <td>79%</td>  
-                <td>91%</td>  
+                <td>79</td>  
+                <td>91</td>  
             </tr>
             <tr> 
                 <td><a target="_blank" href="https://www.youtube.com/watch?v=giWIr7U1deA">
@@ -49,8 +45,8 @@
                 <td>September 3, 2021</td>  
                 <td>2020</td>  
                 <td>432000000</td>  
-                <td>91%</td>  
-                <td>98%</td>  
+                <td>91</td>  
+                <td>98</td>  
             </tr>
             <tr> 
                 <td><a target="_blank" href="https://www.youtube.com/watch?v=x_me3xsvDgk">
@@ -60,8 +56,8 @@
                 <td>November 5, 2021</td>  
                 <td>0</td>  
                 <td>385500000</td>  
-                <td>48%</td>  
-                <td>78%</td>  
+                <td>48</td>  
+                <td>78</td>  
             </tr>
             <tr> 
                 <td><a target="_blank" href="https://www.youtube.com/watch?v=JfVOs4VSpmA">

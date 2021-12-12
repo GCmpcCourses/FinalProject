@@ -2,12 +2,8 @@
     <head>
         <title> Marvel Phase 2 Movie List</title>
 <link rel="stylesheet" href="style.css" >
-<script> 
-
-
-
-</script>
-    </head>
+<script src="myscripts.js"> </script>    
+</head>
     <body>
         <nav>
             <ul>
@@ -21,15 +17,15 @@
         </nav>
         
         <h1 id="topPhase2"> Phase 2 Movies</h1>
-        <table class="center">
+        <table id = myTable class="center">
          <thead> 
-            <th>Movie</th>
-            <th>Title</th>
-            <th>Release Date</th>
-            <th>MCU Timeline</th>
-            <th>Box Office </th>
-            <th>Rotten Tomato Score</th>
-            <th>Auddience Score</th>  
+            <th>Movie</th>  
+            <th onclick=" sortTable(1)" >Title</th>  
+            <th onclick="">Release Date</th>  
+            <th onclick=" mcuTime()">MCU Timeline</th> 
+            <th onclick=" boxOff()">Box Office </th>  
+            <th onclick=" rottenTom()">Rotten Tomato Score %</th>  
+            <th onclick=" audScore()">Auddience Score %</th> 
         </thead>
             <tr> 
                 <td><a target="_blank" href="https://www.youtube.com/watch?v=oYSD2VQagc4"><img src="Posters/IronMan3.jpg" height="169.5" width="113"></a></td>
