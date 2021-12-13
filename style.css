@@ -1,43 +1,31 @@
 
 nav {
     width: 100%;
-    height: 30px;
-    border:0;
-    border-top:5px solid;
-    border-color:indianred
-  
-}
-p{
-  text-align: center;
+    height: 50px;
+    background-color: #696969;
+    border-style:solid;
+    
 }
 ul {
-  margin:0;
-margin-left:  40%;
-padding: 0;
-}
+margin-left:  40%;}
 ul li {
-  background-color: floralwhite;
-display:inline;
+list-style-type:none;
+display:inline-table;
+line-height: 50px;
 }
 ul li a { 
     display:inline-block;
-    border-radius: 0 0 8px 8px;
 text-decoration:none;
 font-size: 14px;
-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-padding: 0 15px;
-color: indianred;
+font-family: Arial;
+padding: 0 12px;
+color: cornsilk;
 }
 ul li a:hover { 
-  background-color: indianred;
-color: cornsilk;
-padding-top: 12px;
-padding-bottom:3px;
-
+color: red;
 }
 table, th, td {
     border: 1px solid black;
-    border-radius: 2px 2px 2px 2px;
     font-size: 16px;
     padding: 5px;
   }
@@ -46,46 +34,6 @@ table, th, td {
     margin-right: auto;
   }
  h1 {
-      margin-left: 45%;
+      margin-left: 35%;
+      margin-right: 25%;
   }
-  thead {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-  }
-  td a{
-    text-decoration-style: solid;
-    color: black;
-  }
-  .table-sortable th {
-    cursor: pointer;
-
-  }
-
-  .table-sortable .th-sort-asc::after {
-    content: "\25b4";
-  }
-  .table-sortable .th-sort-asc::after {
-    content: "\25be";
-  }
-  .table-sortable .th-sort-asc::after, 
-  .table-sortable .th-sort-desc::after {
-    margin-left: 5px;
-  }
-
-  .table-sortable .th-sort-asc, 
-  .table-sortable .th-sort-desc {
-    background:rgba(0, 0, 0, 0.1);
-  }
-
-  table {
-    border-spacing: 0;
-    border: 1px solid #ddd;
-  }
-  th, td {
-    text-align: left;
-    padding: 16px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2
-  }
-  
