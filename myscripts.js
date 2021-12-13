@@ -76,7 +76,7 @@ function sortTable(n) {
         x = rows[i].getElementsByTagName("TD")[3];
         y = rows[i + 1].getElementsByTagName("TD")[3];
         //check if the two rows should switch place:
-        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
           break;
