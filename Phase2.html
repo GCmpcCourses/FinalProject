@@ -1,13 +1,12 @@
-<html>
+<!DOCTYPE html>
     <head>
         <title> Marvel Phase 2 Movie List</title>
 <link rel="stylesheet" href="style.css" >
-<script> 
-
-
-
-</script>
-    </head>
+<script src="myscripts.js"> </script>    
+<img src="MCUbanner.jpeg"
+        width="100.25%" height="285px">
+</img>
+</head>
     <body>
         <nav>
             <ul>
@@ -16,33 +15,109 @@
                 <li> <a href= "Phase2.html"> Phase 2 </a> </li>
                 <li> <a href= "Phase3.html"> Phase 3 </a> </li>
                 <li> <a href= "Phase4.html"> Phase 4 </a> </li>
-                <li> <a href= "Project.html"> About Page </a> </li>
+                <li> <a href= "Project.html"> About</a> </li>
             </ul>
         </nav>
         
-        <table class="center">
-           <h1> Phase 2 Movies</h1>
+        <h1 id="topPhase2"> Phase 2 Movies</h1>
+        <table id = myTable class="center">
+         <thead> 
+            <th>Movie</th>  
+            <th onclick=" sortTable(1)" >Title</th>  
+            <th onclick="">Release Date</th>  
+            <th onclick=" mcuTime()">MCU Timeline</th> 
+            <th onclick=" boxOff()">Box Office </th>  
+            <th onclick=" rottenTom()">Rotten Tomato Score %</th>  
+            <th onclick=" audScore()">Auddience Score %</th> 
+        </thead>
             <tr> 
-                <td>Movie</td>  <td>Title</td>  <td>Release Date</td>  <td>MCU Timeline</td>  <td>Box Office </td>  <td>Rotten Tomato Score</td>  <td>Auddience Score</td>  
+                <td><a target="_blank" href="https://www.youtube.com/watch?v=oYSD2VQagc4"><img src="Posters/IronMan3.jpg" height="169.5" width="113"></a></td>
+                <td><a href="#iron man 3">Iron Man 3</a></td>
+                <td>May 3, 2013</td>
+                <td>2012</td>
+                <td>1215000000</td>
+                <td>79</td>
+                <td>78</td>  
             </tr>
             <tr> 
-                <td></td>  <td>Iron Man 3</td>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  
+                <td><a target="_blank" href="https://www.youtube.com/watch?v=npvJ9FTgZbM"><img src="Posters/ThorDarkWorld.jpg" height="169.5" width="113"></a></td>
+                <td><a href="#thor: the dark world">Thor: The Dark World</a></td>
+                <td>Nov 8, 2013</td>
+                <td>2013</td>
+                <td>644800000</td>
+                <td>66</td>
+                <td>75</td>  
             </tr>
             <tr> 
-                <td></td>  <td>Thor: The Dark World</td>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  
+                <td><a target="_blank" href="https://www.youtube.com/watch?v=7SlILk2WMTI"><img src="Posters/CaptainAmerica_TheWinterSoldier.jpg" height="169.5" width="113"></a></td>
+                <td><a href="#captain america: the winter soldier">Captain America: The Winter Soldier</a></td>
+                    <td>Apr 4, 2014</td>
+                    <td>2014</td>
+                    <td>714400000</td>
+                    <td>90</td>
+                    <td>92</td>  
             </tr>
             <tr> 
-                <td></td>  <td>Captain America: The Winter Soldier</td>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  
+                <td><a target="_blank" href="https://www.youtube.com/watch?v=d96cjJhvlMA"><img src="Posters/GuadiansOfTheGalaxy.jpg" height="169.5" width="113"></a></td>
+                <td><a href="#guardians of the galaxy">Guardians of the Galaxy</a></td>
+                <td>Aug 1, 2014</td>
+                <td>2014</td>
+                <td>772800000</td>
+                <td>92</td>
+                <td>92</td>  
             </tr>
             <tr> 
-                <td></td>  <td>Guardians of the Galaxy</td>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  
+                <td><a target="_blank" href="https://www.youtube.com/watch?v=P5iIPfNzj2o"><img src="Posters/TheAvengers_AgeOfUltron.jpg" height="169.5" width="113"></a></td>
+                <td><a href="#the avengers: age of ultron">The Avengers: Age of Ultron</a></td>
+                <td>May 1, 2015</td>
+                <td>2015</td>
+                <td>1403000000</td>
+                <td>76</td>
+                <td>83</td>  
             </tr>
             <tr> 
-                <td></td>  <td>The Avengers: Age of Ultron</td>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  
-            </tr>
-            <tr> 
-                <td></td>  <td>Ant Man</td>  <td></td>  <td></td>  <td></td>  <td></td>  <td></td>  
+                <td><a target="_blank" href="https://www.youtube.com/watch?v=pWdKf3MneyI"><img src="Posters/AntMan.jpg" height="169.5" width="113"></a></td>
+                <td><a href="#ant man">Ant Man</a></td>
+                <td>Jul 17, 2015</td>
+                <td>2015</td>
+                <td>519300000</td>
+                <td>83</td>
+                <td>86</td>  
             </tr>
         </table>
+        <br>
+
+        <h2>Iron Man 3</h2>
+        <p id="iron man 3"> Plagued with worry and insomnia since saving New York from destruction, Tony Stark (Robert Downey Jr.), now,
+             is more dependent on the suits that give him his Iron Man persona -- so much so that every aspect of his life is affected, 
+             including his relationship with Pepper (Gwyneth Paltrow). After a malevolent enemy known as the Mandarin (Ben Kingsley) reduces his personal world to rubble,
+              Tony must rely solely on instinct and ingenuity to avenge his losses and protect the people he loves.</p>
+
+        <h2>Thor:The Dark World</h2>
+<p id="thor: the dark world">In ancient times, the gods of Asgard fought and won a war against an evil race known as the Dark Elves. The survivors were neutralized, and their ultimate weapon
+     -- the Aether -- was buried in a secret location. Hundreds of years later, Jane Foster (Natalie Portman) finds the Aether and becomes its host, forcing Thor (Chris Hemsworth) to bring her
+      to Asgard before Dark Elf Malekith (Christopher Eccleston) captures her and uses the weapon to destroy the Nine Realms -- including Earth.</p>
+
+<h2>Captain American: The Winter Soldier</h2>
+<p id="captain america: the winter soldier"> After the cataclysmic events in New York with his fellow Avengers, Steve Rogers, aka Captain America (Chris Evans), lives in the nation's capital as he 
+    tries to adjust to modern times. An attack on a S.H.I.E.L.D. colleague throws Rogers into a web of intrigue that places the whole world at risk. Joining forces with the Black Widow (Scarlett Johansson) 
+    and a new ally, the Falcon, Rogers struggles to expose an ever-widening conspiracy, but he and his team soon come up against an unexpected enemy. </p>
+
+<h2>Guardians of the Galaxy</h2>
+<p id="guardians of the galaxy">Brash space adventurer Peter Quill (Chris Pratt) finds himself the quarry of relentless bounty hunters after he steals an orb coveted by Ronan, a powerful villain. To evade Ronan, 
+    Quill is forced into an uneasy truce with four disparate misfits: gun-toting Rocket Raccoon, treelike-humanoid Groot, enigmatic Gamora, and vengeance-driven Drax the Destroyer. But when he discovers the orb's
+     true power and the cosmic threat it poses, Quill must rally his ragtag group to save the universe. </p>
+
+<h2>The Avengers: Age of Ultron</h2>
+<p id="the avengers: age of ultron"> When Tony Stark (Robert Downey Jr.) jump-starts a dormant peacekeeping program, things go terribly awry, forcing him, Thor (Chris Hemsworth), the Incredible Hulk (Mark Ruffalo)
+     and the rest of the Avengers to reassemble. As the fate of Earth hangs in the balance, the team is put to the ultimate test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way, 
+     they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff. </p>
+
+<h2>Ant Man</h2>
+<p id="ant man">Forced out of his own company by former protégé Darren Cross, Dr. Hank Pym (Michael Douglas) recruits the talents of Scott Lang (Paul Rudd), a master thief just released from prison. Lang becomes Ant-Man, 
+    trained by Pym and armed with a suit that allows him to shrink in size, possess superhuman strength and control an army of ants.
+     The miniature hero must use his new skills to prevent Cross, also known as Yellowjacket, from perfecting the same technology and using it as a weapon for evil.</p>
+
+<a href="#topPhase2">back to top</a>
     </body>
 </html>
