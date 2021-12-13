@@ -5,7 +5,10 @@ nav {
     border:0;
     border-top:5px solid;
     border-color:indianred
-    
+  
+}
+p{
+  text-align: center;
 }
 ul {
   margin:0;
